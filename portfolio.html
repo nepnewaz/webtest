@@ -14,8 +14,6 @@
 
   <title>Ace</title>
 
-
-
   <!-- slider stylesheet -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css">
@@ -34,12 +32,14 @@
 <body class="sub_page">
   <div class="hero_area">
 
+    <div class="main slick_main">
+    </div>
     <!-- header section strats -->
     <header class="header_section">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <a href="index.html" class="navbar-brand">
-             <!---<img src="images/logo-black.png" alt=""> logo ---> 
+            <!---<img src="images/logo-black.png" alt=""> logo ---> 
             <div class="logo name">
               <style>
                 
@@ -62,10 +62,10 @@
                 <li class="nav-item ">
                   <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                   <a class="nav-link" href="about.html"> About</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active ">
                   <a class="nav-link" href="portfolio.html">Portfolio </a>
                 </li>
                 <li class="nav-item">
@@ -86,36 +86,114 @@
     <!-- end header section -->
   </div>
 
-  <!-- about section -->
 
-  <section class="about_section layout_padding">
-    <div class="container-fluid">
+  <!-- portfolio section -->
+
+  <section class="portfolio_section layout_padding-top">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Our Portfolio
+        </h2>
+        <p>
+          There are many variations of
+        </p>
+      </div>
+    </div>
+    <div class="portfolio_container slick-carousel">
       <div class="box">
-        <div class="img_container">
-          <div class="img-box b1">
-            <img src="images/a-1.jpg" alt="">
-          </div>
-          <div class="img-box b2">
-            <img src="images/a-2.jpg" alt="">
-          </div>
-        </div>
-        <div class="detail-box">
-          <h2>
-            About Our Studio
-          </h2>
-          <p>
-            There are many variations of passages of Lorem Ipsum
-            There are many variations of
-            passages of Lorem Ipsum
-          </p>
+        <img src="images/p-1.jpg" alt="">
+        <div class="link-box">
           <a href="">
-            Read More
+            <img src="images/link.png" alt="">
           </a>
+          <h6>
+            There are many
+          </h6>
+        </div>
+      </div>
+      <div class="box">
+        <img src="images/p-2.jpg" alt="">
+        <div class="link-box">
+          <a href="">
+            <img src="images/link.png" alt="">
+          </a>
+          <h6>
+            There are many
+          </h6>
+        </div>
+      </div>
+      <div class="box">
+        <img src="images/p-3.jpg" alt="">
+        <div class="link-box">
+          <a href="">
+            <img src="images/link.png" alt="">
+          </a>
+          <h6>
+            There are many
+          </h6>
+        </div>
+      </div>
+      <div class="box">
+        <img src="images/p-4.jpg" alt="">
+        <div class="link-box">
+          <a href="">
+            <img src="images/link.png" alt="">
+          </a>
+          <h6>
+            There are many
+          </h6>
         </div>
       </div>
     </div>
   </section>
-  <!-- end about section -->
+
+  <!-- end portfolio section -->
+
+  <!-- quality section -->
+
+  <section class="quality_section layout_padding">
+    <div class="container">
+      <div class="quality_container">
+        <h2>
+          Quality <br>
+          your Photo
+        </h2>
+        <div class="box">
+          <div class="detail-box">
+            <div class="img-box">
+              <img src="images/q-1.png" alt="">
+            </div>
+            <div class="text-box">
+              <h5>
+                Professional Staff
+              </h5>
+              <p>
+                There are many variations
+                of passages
+              </p>
+            </div>
+          </div>
+          <div class="detail-box">
+            <div class="img-box">
+              <img src="images/q-2.png" alt="">
+            </div>
+            <div class="text-box">
+              <h5>
+                Save money
+              </h5>
+              <p>
+                There are many variations
+                of passages
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end quality section -->
 
   <!-- info section -->
   <section class="info_section layout_padding2">
@@ -143,12 +221,12 @@
                   Home
                 </a>
               </li>
-              <li class="active">
+              <li>
                 <a href="about.html">
                   About
                 </a>
               </li>
-              <li>
+              <li class="active">
                 <a href="portfolio.html">
                   Portfolio
                 </a>
