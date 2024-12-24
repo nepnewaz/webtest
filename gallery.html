@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/gallerystyle.css">
+  <title>Rohen Design | Capturer</title>
+</head>
+
+<body>
+
+  <div class="head" id="home" >
+  
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a  href="index.html">
+            <img src="img/logo.png" alt="logo" />
+          </a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a  style="color: black;" href="index.html">HOME </a></li>
+        <li><a style="color: black;" href="gallery.html">GALLERY</a></li>
+       
+        <li class="nav__logo">
+          <a href="index.html">
+            <img src="img/logo.png" alt="logo" />
+          </a>
+        </li>
+        <li> <a style="color: black;" href="about.html">ABOUT US</a></li>
+        <li><a style="color: black;" href="contact.html">CONTACT US</a></li>
+      </ul>
+    </nav>
+</div>
+ 
+
+<style>
+  .gallery .responsive-container-block {
+  min-height: 75px;
+  height: fit-content;
+  width: 100%;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  justify-content: flex-start;
+}
+
+.gallery .responsive-container-block.bigContainer {
+  padding-top: 10px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+}
+
+.gallery .responsive-container-block.Container {
+  max-width: 1320px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-bottom: 50px;
+  margin-left: auto;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.gallery .overlay {
+  position: fixed;
+  background-image: initial;
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat-x: initial;
+  background-repeat-y: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: rgba(71, 69, 69, 0.7);
+  height: 100%;
+  width: 100%;
+  max-height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+  display: none;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+.gallery .overlay-inner {
+  top: 50%;
+  right: 0px;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: initial;
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat-x: initial;
+  background-repeat-y: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: white;
+  width: fit-content;
+  padding-top: 35px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  position: relative;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  opacity: 1;
+  max-width: 50%;
+  max-height: 85%;
+}
+
+.gallery .close {
+  position: absolute;
+  top: 9px;
+  right: 15px;
+  background-image: none;
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat-x: initial;
+  background-repeat-y: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  outline-color: initial;
+  outline-style: initial;
+  outline-width: 0px;
+  color: #474545;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-top-style: initial;
+  border-right-style: initial;
+  border-bottom-style: initial;
+  border-left-style: initial;
+  border-top-color: initial;
+  border-right-color: initial;
+  border-bottom-color: initial;
+  border-left-color: initial;
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.gallery .overlay-inner .hdImgs {
+  width: fit-content;
+  height: calc(80% - 55px);
+  display: flex;
+}
+
+.gallery .overlay-inner img {
+  max-height: 100%;
+  max-width: 100%;
+  transform: none;
+}
+
+.gallery .close:hover {
+  cursor: pointer;
+}
+
+.gallery .project {
+  position: relative;
+  width: 33%;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+.gallery .btn-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.gallery .project:hover .btn-box {
+  display: block;
+}
+
+.gallery .btn {
+  cursor: pointer;
+}
+
+.gallery .smallImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .gallery .project {
+    width: 50%;
+  }
+
+  .gallery .overlay-inner {
+    width: 90%;
+  }
+}
+
+@media (max-width: 500px) {
+  .gallery .project {
+    width: 100%;
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+  }
+
+  .gallery .responsive-container-block.bigContainer {
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+  }
+
+  .gallery .overlay-inner {
+    max-width: 90%;
+  }
+}
+</style>
+<div class="gallery" unique-script-id="w-w-dm-id">
+  <div class="responsive-container-block bigContainer">
+    <div class="responsive-container-block Container">
+      <div class="project">
+        <img class="smallImage image-block" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/mp411.svg">
+        <div class="overlay">
+          <div class="overlay-inner">
+            <button class="close">
+              Close X
+            </button>
+            <div class="hdImgs">
+              <img class="squareImg" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/mp411.svg">
+            </div>
+          </div>
+        </div>
+        <div class="btn-box">
+          <button class="btn">
+            View
+          </button>
+        </div>
+      </div>
+      <div class="project">
+        <img class="smallImage" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/mp412.svg">
+        <div class="overlay">
+          <div class="overlay-inner">
+            <button class="close">
+              Close X
+            </button>
+            <div class="hdImgs">
+              <img class="squareImg" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/mp412.svg">
+            </div>
+          </div>
+        </div>
+        <div class="btn-box">
+          <button class="btn">
+            View
+          </button>
+        </div>
+      </div>
+      <div class="project">
+        <img class="smallImage" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/mp413.svg">
+        <div class="overlay">
+          <div class="overlay-inner">
+            <button class="close">
+              Close X
+            </button>
+            <div class="hdImgs">
+              <img class="squareImg" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/mp413.svg">
+            </div>
+          </div>
+        </div>
+        <div class="btn-box">
+          <button class="btn">
+            View
+          </button>
+        </div>
+      </div>
+      <div class="project">
+        <img class="smallImage" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/mp414.svg">
+        <div class="overlay">
+          <div class="overlay-inner">
+            <button class="close">
+              Close X
+            </button>
+            <div class="hdImgs">
+              <img class="squareImg" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/mp414.svg">
+            </div>
+          </div>
+        </div>
+        <div class="btn-box">
+          <button class="btn">
+            View
+          </button>
+        </div>
+      </div>
+      <div class="project">
+        <img class="smallImage" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/mp415.svg">
+        <div class="overlay">
+          <div class="overlay-inner">
+            <button class="close">
+              Close X
+            </button>
+            <div class="hdImgs">
+              <img class="squareImg" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/mp415.svg">
+            </div>
+          </div>
+        </div>
+        <div class="btn-box">
+          <button class="btn">
+            View
+          </button>
+        </div>
+      </div>
+      <div class="project">
+        <img class="smallImage" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/mp411.svg">
+        <div class="overlay">
+          <div class="overlay-inner">
+            <button class="close">
+              Close X
+            </button>
+            <div class="hdImgs">
+              <img class="squareImg" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/mp411.svg">
+            </div>
+          </div>
+        </div>
+        <div class="btn-box">
+          <button class="btn">
+            View
+          </button>
+        </div>
+      </div>
+      <div class="project">
+        <img class="smallImage" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/mp412.svg">
+        <div class="overlay">
+          <div class="overlay-inner">
+            <button class="close">
+              Close X
+            </button>
+            <div class="hdImgs">
+              <img class="squareImg" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/mp412.svg">
+            </div>
+          </div>
+        </div>
+        <div class="btn-box">
+          <button class="btn">
+            View
+          </button>
+        </div>
+      </div>
+      <div class="project">
+        <img class="smallImage" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/mp413.svg">
+        <div class="overlay">
+          <div class="overlay-inner">
+            <button class="close">
+              Close X
+            </button>
+            <div class="hdImgs">
+              <img class="squareImg" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/mp413.svg">
+            </div>
+          </div>
+        </div>
+        <div class="btn-box">
+          <button class="btn">
+            View
+          </button>
+        </div>
+      </div>
+      <div class="project">
+        <img class="smallImage" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/mp415.svg">
+        <div class="overlay">
+          <div class="overlay-inner">
+            <button class="close">
+              Close X
+            </button>
+            <div class="hdImgs">
+              <img class="squareImg" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/mp415.svg">
+            </div>
+          </div>
+        </div>
+        <div class="btn-box">
+          <button class="btn">
+            View
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  
+
+
+
+  <footer id="contact">
+    <div class="section__container footer__container">
+      <div class="footer__col">
+        <img src="img/logo.png" alt="logo" />
+        <div class="footer__socials">
+          <a href="#"><i class="ri-facebook-fill"></i></a>
+          <a href="#"><i class="ri-instagram-line"></i></a>
+          <a href="#"><i class="ri-twitter-fill"></i></a>
+          <a href="#"><i class="ri-youtube-fill"></i></a>
+          <a href="#"><i class="ri-pinterest-line"></i></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <ul class="footer__links">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="gallery.html">GALLERY</a></li>
+          
+         
+          <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>STAY IN TOUCH</h4>
+        <p>
+          Keep up-to-date with all things Capturer! Join our community and
+          never miss a moment!
+        </p>
+      </div>
+    </div>
+    <div class="footer__bar">
+      Copyright © 2024 ROHEN PHOTOGRAPHY. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
